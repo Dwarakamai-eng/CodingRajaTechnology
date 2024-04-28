@@ -23,6 +23,8 @@ const LoginForm = () => {
       <input type="text" value={username} onChange={e => setUsername(e.target.value)} /><br />
       <label>Password:</label><br />
       <input type="password" value={password} onChange={e => setPassword(e.target.value)} /><br />
+      {loading && <div>Loading...</div>}
+      {error && <div className="error">{error}</div>
       <button type="submit">Login</button>
     </form>
   );
